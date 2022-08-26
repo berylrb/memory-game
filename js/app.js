@@ -89,8 +89,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const optionOneId = cardsChosenId[0]
     const optionTwoId = cardsChosenId[1]
     if (cardsChosen[0] === cardsChosen[1]) {
-      monsters[optionOneId].setAttribute('src', 'images/monsters/back.png')
-      monsters[optionTwoId].setAttribute('src', 'images/monsters/back.png')
+      monsters[optionOneId].setAttribute('src', 'images/monsters/back2.png')
+      monsters[optionTwoId].setAttribute('src', 'images/monsters/back2.png')
       cardsWon.push(cardsChosen)
     } else {
       monsters[optionOneId].setAttribute('src', 'images/monsters/empty.png')
