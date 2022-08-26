@@ -9,7 +9,11 @@
 /*------------------------ Cached Element References ------------------------*/
 
 const grid = document.querySelector('.grid-div')
+const resultDisplay = document.querySelector('#result-span')
 
+let cardsChosen = []
+let cardsChosenId = []
+let cardsWon = []
 
 /*----------------------------- Event Listeners -----------------------------*/
 
@@ -66,17 +70,52 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   ]
 
+  cards.sort(() => 0.5 - Math.random())
 
+  //create board function
   function makeBoard() {
     for (let i = 0; i < cards.length; i++) {
       let card = document.createElement('img')
       card.setAttribute('src', 'images/monsters/empty.png')
       card.setAttribute('data-id', i)
-      // card.addEventListener('click', flipcard)
+      card.addEventListener('click', flipCard)
       grid.appendChild(card)
     }
   }
-  
+
+  //check for matches
+  function checkForMatch() {
+    let monsters = document.querySelectorAll('img')
+    const optionOneId = cardsChosenId[0]
+    const optionTwoId = cardsChosenId[1]
+    if (cardsChosen[0] === cardsChosen[1]) {
+      monsters[optionOneId].setAttribute('src', 'images/monsters/back.png')
+      monsters[optionTwoId].setAttribute('src', 'images/monsters/back.png')
+      cardsWon.push(cardsChosen)
+    } else {
+      monsters[optionOneId].setAttribute('src', 'images/monsters/empty.png')
+      monsters[optionTwoId].setAttribute('src', 'images/monsters/empty.png')
+    }
+    cardsChosen = []
+    cardsChosenId = []
+    resultDisplay.textContent = cardsWon.length
+    if (cardsWon.length === cards.length/2) {
+      resultDisplay.textContent = 'Congratulations! You found all the monsters!'
+    }
+  }
+
+
+  //flip card
+  function flipCard() {
+    let cardId = this.getAttribute('data-id')
+    cardsChosen.push(cards[cardId].name)
+    cardsChosenId.push(cardId)
+    this.setAttribute('src', cards[cardId].img)
+    if (cardsChosen.length === 2) {
+      setTimeout(checkForMatch, 500)
+    }
+  }
+
   makeBoard()
 
 
