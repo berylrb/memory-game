@@ -70,6 +70,7 @@ document.addEventListener('DOMContentLoaded', () => {
     },
   ]
 
+  // cards show up randomly every time
   cards.sort(() => 0.5 - Math.random())
 
   //create board function
@@ -89,8 +90,8 @@ document.addEventListener('DOMContentLoaded', () => {
     const optionOneId = cardsChosenId[0]
     const optionTwoId = cardsChosenId[1]
     if (cardsChosen[0] === cardsChosen[1]) {
-      monsters[optionOneId].setAttribute('src', 'images/monsters/back2.png')
-      monsters[optionTwoId].setAttribute('src', 'images/monsters/back2.png')
+      monsters[optionOneId].setAttribute('src', "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7")
+      monsters[optionTwoId].setAttribute('src', "data:image/gif;base64,R0lGODlhAQABAIAAAAAAAP///yH5BAEAAAAALAAAAAABAAEAAAIBRAA7")
       cardsWon.push(cardsChosen)
     } else {
       monsters[optionOneId].setAttribute('src', 'images/monsters/empty.png')

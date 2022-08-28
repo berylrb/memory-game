@@ -1,6 +1,10 @@
 body {
   width: 100vw;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 img {
@@ -18,10 +22,17 @@ img {
 }
 
 .grid-div {
-  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 15px;
   display: flex;
   flex-wrap: wrap;
-  height: 32em;
-  width: 24.6em;
+  height: 33em;
+  width: 24.9em;
+  background-color: #cfe0fc;
+  border-radius: 5px;
+  box-shadow: 10px 13px #45546b;
 }
 
