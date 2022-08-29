@@ -125,5 +125,5 @@ document.addEventListener('DOMContentLoaded', () => {
 
 /*-------------------------------- Functions --------------------------------*/
 
-//create board function
+
 
