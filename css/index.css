@@ -24,8 +24,9 @@ img {
   height: 7.8em;
   margin: 5px 2.5px 0 2.5px;
   border-radius: 5px;
-  transition: transform .3s ease;
+  transition: transform .5s;
 }
+
 
 img:active {
   transform:rotateY(180deg);
@@ -64,3 +65,7 @@ img:active {
   border-radius: 5px;
   box-shadow: 11px 13px #323e4e;
 }
+
+/* .grid-div:hover {
+  background-color: #ecec93;
+} */
