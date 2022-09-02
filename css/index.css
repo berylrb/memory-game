@@ -51,6 +51,11 @@ img:active {
   
 }
 
+.score-div {
+  font-family: 'Sigmar One', cursive;
+  color: #323e4e;
+}
+
 .grid-div {
   display: flex;
   flex-direction: column;

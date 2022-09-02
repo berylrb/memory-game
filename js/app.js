@@ -10,12 +10,15 @@
 
 const grid = document.querySelector('.grid-div')
 const resultDisplay = document.querySelector('#result-span')
+// const resetBttn = document.querySelector('button')
 
 let cardsChosen = []
 let cardsChosenId = []
 let cardsWon = []
 
 /*----------------------------- Event Listeners -----------------------------*/
+
+
 
 // add cards of monsters
 document.addEventListener('DOMContentLoaded', () => {
@@ -84,6 +87,8 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   }
 
+  
+
   //check for matches
   function checkForMatch() {
     let monsters = document.querySelectorAll('img')
@@ -119,8 +124,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
   makeBoard()
 
-
 })
+
+// resetBttn.addEventListener('click', () => {
+//   location.reload
+// })
+
 
 
 /*-------------------------------- Functions --------------------------------*/
