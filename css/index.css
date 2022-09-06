@@ -11,7 +11,7 @@ body {
 }
 
 .game-title {
-  margin: 80px 0 0 0;
+  margin: 50px 0 40px 0;
   /* font-family: 'Rammetto One', cursive; */
   font-family: 'Sigmar One', cursive;
   font-size: 1.5em;
@@ -46,9 +46,9 @@ img:active {
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  height: 100%;
-  
+  margin: 20px;
+  max-height: 80%;
+  padding: 20px;
 }
 
 .score-div {
@@ -61,7 +61,7 @@ img:active {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 15px;
+  padding: 35px;
   display: flex;
   flex-wrap: wrap;
   height: 33em;
@@ -69,6 +69,7 @@ img:active {
   background-color: #cfe0fc;
   border-radius: 5px;
   box-shadow: 11px 13px #323e4e;
+  margin: 20px;
 }
 
 /* .grid-div:hover {
